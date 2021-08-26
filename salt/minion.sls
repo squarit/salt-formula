@@ -104,7 +104,8 @@ salt-minion:
       - file: remove-old-minion-conf-file
     - order: last
     {% endif %}
-    {%- if not salt_settings.restart_via_at %}
+    {%- if salt_settings.minion_service_details.state != 'ignore' %}
+      {%- if not salt_settings.restart_via_at %}
   cmd.run:
         {%- if grains['saltversioninfo'] >= [ 2016, 3 ] %}
             {%- if grains['kernel'] == 'Windows' %}
@@ -162,6 +163,7 @@ restart-salt-minion:
         {%- endif %}
       - file: salt-minion
       - file: remove-old-minion-conf-file
+      {%- endif %}
     {%- endif %}
 
     {% if 'inotify' in  salt_settings.get('minion', {}).get('beacons', {}) and salt_settings.get('pyinotify', False) %}
