@@ -1,5 +1,70 @@
 # Changelog
 
+## [1.9.5](https://github.com/saltstack-formulas/salt-formula/compare/v1.9.4...v1.9.5) (2021-11-05)
+
+
+### Bug Fixes
+
+* make it possible to not have key_url set ([97e1d1f](https://github.com/saltstack-formulas/salt-formula/commit/97e1d1f07a2acc8e9b048412911d61695d7187b3)), closes [#520](https://github.com/saltstack-formulas/salt-formula/issues/520)
+* update to modern defaults for Debian family ([a932a8c](https://github.com/saltstack-formulas/salt-formula/commit/a932a8cc84d6a97d958aa0d6e6b1026bbbf5a745))
+
+## [1.9.4](https://github.com/saltstack-formulas/salt-formula/compare/v1.9.3...v1.9.4) (2021-10-27)
+
+
+### Bug Fixes
+
+* **master:** don't manage config for saltstack enterprise master plugin ([184f338](https://github.com/saltstack-formulas/salt-formula/commit/184f338741c42457e5823c5a9eccecf24cbc1b34))
+
+## [1.9.3](https://github.com/saltstack-formulas/salt-formula/compare/v1.9.2...v1.9.3) (2021-10-05)
+
+
+### Continuous Integration
+
+* **kitchen+ci:** update with latest CVE pre-salted images ([1a8512d](https://github.com/saltstack-formulas/salt-formula/commit/1a8512d77f8212cd51aa7ba09625f647adc5e171))
+
+
+### Tests
+
+* **_mapdata:** reset indentation [skip ci] ([678548f](https://github.com/saltstack-formulas/salt-formula/commit/678548fc8ba4bb8fe2c791665b8dda3abca327ee))
+* **_mapdata:** use `15.3` for `opensuse-15.yaml` ([f4a91c4](https://github.com/saltstack-formulas/salt-formula/commit/f4a91c458cca5b609ec1fc32cd100c147e1894b2))
+* **neon:** remove pillar and tests for `v3000` ([d00b04a](https://github.com/saltstack-formulas/salt-formula/commit/d00b04a5df4a24ba49a4f8fa7028f5e02503aac8))
+
+## [1.9.2](https://github.com/saltstack-formulas/salt-formula/compare/v1.9.1...v1.9.2) (2021-09-17)
+
+
+### Bug Fixes
+
+* **debian,ubuntu:** rename repo file to match documentation ([47ab261](https://github.com/saltstack-formulas/salt-formula/commit/47ab261b397da51febffaefef848dfeff9b57c27))
+
+
+### Continuous Integration
+
+* **mapdata:** remove Ubuntu 16.04 [skip ci] ([cd2a0bf](https://github.com/saltstack-formulas/salt-formula/commit/cd2a0bfdf00aa196d11b2a06f5ecd2023a1cb469))
+
+## [1.9.1](https://github.com/saltstack-formulas/salt-formula/compare/v1.9.0...v1.9.1) (2021-09-04)
+
+
+### Bug Fixes
+
+* **default:** set salt:minion:master_type to str ([ca1df1b](https://github.com/saltstack-formulas/salt-formula/commit/ca1df1b69e9b9c2caef8a1e2a18a6a68a6cdf524))
+
+
+### Continuous Integration
+
+* **freebsd:** update with latest pre-salted Vagrant boxes [skip ci] ([0231e63](https://github.com/saltstack-formulas/salt-formula/commit/0231e6368e38e8c2d3a8ddf3c8a45728f19184ac))
+* **gemfile+lock:** use `ssf` customised `inspec` repo [skip ci] ([a86e19e](https://github.com/saltstack-formulas/salt-formula/commit/a86e19e794d7bb9f634818c3fe36352b3207187a))
+* **kitchen:** move `provisioner` block & update `run_command` [skip ci] ([5cc8759](https://github.com/saltstack-formulas/salt-formula/commit/5cc8759efd586b98dda3fc0cdf627d57bee7416b))
+* **kitchen+ci:** update with latest `3003.2` pre-salted images [skip ci] ([86b0fa1](https://github.com/saltstack-formulas/salt-formula/commit/86b0fa1d406a2bcbef42f60e74b0941f16ed00d4))
+* **pillar:** update master_type in pillar.example ([8fa064b](https://github.com/saltstack-formulas/salt-formula/commit/8fa064baa911d7c5f5527be770a49264cf9c213c))
+* add Debian 11 Bullseye & update `yamllint` configuration [skip ci] ([ac1d3b9](https://github.com/saltstack-formulas/salt-formula/commit/ac1d3b9a2de95d9e08577e308b08482875c61cd3))
+
+
+### Tests
+
+* **_mapdata:** add AlmaLinux verification file [skip ci] ([42d6487](https://github.com/saltstack-formulas/salt-formula/commit/42d64870e33b68b1cc6bf920c876ac2edc7ef4f5))
+* **_mapdata:** update verification files for `master_type: str` ([c16e7a3](https://github.com/saltstack-formulas/salt-formula/commit/c16e7a3b755e849fc91bea1aefd0d549a47882e5))
+* **pkgs_spec:** fix latest rubocop violations [skip ci] ([f64197a](https://github.com/saltstack-formulas/salt-formula/commit/f64197ada462dc7a1a9d6b436ccec4ff5f3aa42f))
+
 # [1.9.0](https://github.com/saltstack-formulas/salt-formula/compare/v1.8.5...v1.9.0) (2021-07-14)
 
 
