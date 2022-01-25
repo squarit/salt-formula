@@ -2,6 +2,10 @@
 # vim: ft=yaml
 ---
 salt:
+  py_ver: 'py3'
+  # Override used for FreeBSD minion service
+  retry_options:
+    attempts: 5
   master:
     fileserver_backend:
       - rootfs
@@ -18,6 +22,8 @@ salt:
           - /path/to/stack2.cfg
       - reclass:
           inventory_base_uri: /etc/reclass
+      - saltclass:
+          - path: /srv/saltclass
   minion:
     master: localhost
     fileserver_backend:
