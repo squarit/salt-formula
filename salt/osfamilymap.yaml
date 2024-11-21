@@ -13,7 +13,7 @@
 {%- set osmajorrelease = salt['grains.get']('osmajorrelease', osrelease)|string %}
 {%- set oscodename = salt['grains.get']('oscodename') %}
 {%- set opensuse_repo_suffix = 'Leap_' ~ osrelease if salt['grains.get']('osfinger', '') == 'Leap-15' else 'Tumbleweed' %}
-{%- set salt_repo = salt['pillar.get']('salt:repo', 'https://repo.saltproject.io') %}
+{%- set salt_repo = salt['pillar.get']('salt:repo', 'https://packages.broadcom.com/artifactory') %}
 
 #from template-formula
 {%- if grains.os_family == 'MacOS' %}
@@ -42,9 +42,9 @@ Debian:
 
 RedHat:
   pkgrepo_name: saltstack
-  pkgrepo_humanname: SaltStack repo for RHEL/CentOS $releasever
-  pkgrepo: '{{ salt_repo }}/{{ py_ver_repr or 'yum' }}/redhat/$releasever/$basearch/{{ salt_release }}'
-  key_url: '{{ salt_repo }}/{{ py_ver_repr or 'yum' }}/redhat/$releasever/$basearch/{{ salt_release }}/SALTSTACK-GPG-KEY.pub'
+  pkgrepo_humanname: SaltStack repo for RHEL/CentOS
+  pkgrepo: 'https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.repo'
+  key_url: 'https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public'
   pygit2: python-pygit2
   python_git: GitPython
   gitfs:
